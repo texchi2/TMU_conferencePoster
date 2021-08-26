@@ -38,7 +38,131 @@
 \usepackage{soul} % for \hl{}
 \usepackage{tabularx} % for resizebox?
 \usepackage{colortbl}     % arrayrulecolor
+%%
+%%%%
+%%% for abbreviations, or acronyms
+\usepackage[acronym, nopostdot]{glossaries}  % automake
+\usepackage{glossary-inline}
+%\setacronymstyle{long-short}
+%\renewcommand*{\glossarysection}[2][]{} 
+%\renewcommand*{\glossarysection}[2][]{\textbf{#1}: }
+% for abbreviations environment
+%\newcommand{\abbrlabel}[1]{\makebox[3cm][l]{\textbf{#1}\ \dotfill}}
+\newenvironment{abbreviation}
 
+
+%\section{abbreviation}
+%%%%%%%%%%%%% Define abbreviation
+%\makeglossaries %https://tex.stackexchange.com/questions/110095/list-of-acronyms-is-not-displayed
+
+
+
+\newacronym{ncbi}{NCBI}{National Center for Biotechnology Information}
+\newacronym{degs}{DEGs}{differentially expressed genes}
+
+\newacronym{ihc}{IHC}{immunohistochemistry}
+\newacronym{fdr}{FDR}{false discovery rate}
+
+\newacronym{hpa}{HPA}{the Human Protein Atlas}
+\newacronym{hnscc}{HNSCC}{head and neck squamous cell carcinoma}
+\newacronym{tcga}{TCGA}{the Cancer Genome Atlas}
+\newacronym{tcpa}{TCPA}{the Cancer Proteome Atlas}
+\newacronym{rna}{RNA}{ribonucleic acid}
+\newacronym{rnaseq}{RNA-Seq}{RNA sequencing}
+\newacronym{lncrna}{lncRNA}{long non-coding RNA}
+%\newacronym{km}{KM}{Kaplan--Meier}
+\newacronym{rppa}{RPPAs}{reverse-phase protein arrays}
+\newacronym{rpma}{RPMA}{reverse-phase protein lysate microarray}
+
+\newacronym{mmp}{MMP}{matrix metalloproteinase}
+ %DKK1, CAMK2N1, STC2, PGK1, SURF4, USP10, NDFIP1, FOXA2, STIP1, and DKC1
+ %ZNF557, ZNF266, IL19, MYO1H, FCGBP, LOC148709, EVPLL, PNMA5, KIAA1683, and NPB
+
+\newacronym{DKK1}{DKK1}{dickkopf WNT signaling pathway inhibitor 1} 
+\newacronym{CAMK2N1}{CAMK2N1}{calcium/calmodulin dependent protein kinase II inhibitor 1} 
+\newacronym{CALML5}{CALML5}{calmodulin like 5}
+
+\newacronym{STC2}{STC2}{stanniocalcin 2} 
+\newacronym{PGK1}{PGK1}{phosphoglycerate kinase 1} 
+\newacronym{SURF4}{SURF4}{surfeit 4} 
+\newacronym{USP10}{USP10}{ubiquitin specific peptidase 10} 
+\newacronym{NEDD4}{NEDD4}{neural precursor cell expressed, developmentally down-regulated 4}
+\newacronym{NDFIP1}{NDFIP1}{NEDD4 family interacting protein 1} 
+\newacronym{FOXA2}{FOXA2}{forkhead box A2} 
+\newacronym{STIP1}{STIP1}{stress-induced-phosphoprotein 1} 
+\newacronym{DKC1}{DKC1}{dyskeratosis congenita 1, dyskerin} 
+
+\newacronym{ZNF557}{ZNF557}{zinc finger protein 557} 
+\newacronym{ZNF266}{ZNF266}{zinc finger protein 266} 
+\newacronym{IL19}{IL19}{interleukin 19} 
+\newacronym{MYO1H}{MYO1H}{myosin 1H} 
+\newacronym{FCGBP}{FCGBP}{Fc fragment of IgG binding protein} 
+\newacronym{LOC148709}{LOC148709}{LncRNA LOC148709} 
+\newacronym{EVPLL}{EVPLL}{envoplakin-like protein} 
+\newacronym{PNMA5}{PNMA5}{paraneoplastic antigen like 5} 
+%\newacronym{KIAA1683}{KIAA1683}{IQCN, IQ Motif Containing N} 
+\newacronym{IQCN}{IQCN}{IQ motif containing N} % previous name KIAA1683
+% "IQ'' refers to the first two amino acids of the motif: isoleucine (commonly) and glutamine (invariably)
+\newacronym{NPB}{NPB}{neuropeptide B} 
+
+ \newacronym{rt}{RT}{radiation therapy}
+ \newacronym{nccn}{NCCN}{National Comprehensive Cancer Network}
+ \newacronym{hif}{HIF}{hypoxia-inducible factor}
+ \newacronym{egfr}{EGFR}{epidermal growth factor receptor}
+ \newacronym{ras}{RAS}{rat sarcoma}
+ \newacronym{hras}{HRAS}{Harvey rat sarcoma viral oncoprotein}
+ \newacronym{erk}{ERK}{extracellular signal-regulated kinases}
+ \newacronym{us}{US}{United States}
+ \newacronym{fda}{FDA}{Food and Drug Administration}
+ \newacronym{tpf}{Tax-PF}{docetaxel, cisplatin, and 5-fluorouracil}
+ \newacronym{tki}{TKI}{tyrosine kinase inhibitor}
+ \newacronym{her}{HER}{human epidermal growth factor receptor}
+ \newacronym{ici}{ICI}{immune-checkpoint inhibitor}
+ \newacronym{ctla4}{CTLA-4}{cytotoxic T lymphocyte antigen 4}
+ \newacronym{pd1}{PD-1}{programmed death 1}
+ \newacronym{pdl1}{PD-L1}{programmed death ligand 1}
+ \newacronym{tim3}{TIM-3}{T-cell immunoglobulin mucin protein 3}
+ \newacronym{lag3}{LAG-3}{lymphocyte activation gene 3}
+ \newacronym{ifng}{IFN-$\gamma$}{interferon gamma}
+ \newacronym{tigit}{TIGIT}{T cell immunoglobin and immunoreceptor tyrosine-based inhibitory motif}
+ \newacronym{gitr}{GITR}{glucocorticoid-induced tumor necrosis factor receptor}
+ \newacronym{vista}{VISTA}{V-domain Ig suppressor of T-cell activation}
+ \newacronym{tmsb4x}{TMSB4X}{thymosin beta-4 X-linked}
+ \newacronym{emt}{EMT}{epithelial-mesenchymal-transition}
+ \newacronym{gdc}{GDC}{Genomic Data Commons}
+ \newacronym{nci}{NCI}{the National Cancer Institute}
+ \newacronym{gdac}{GDAC}{genome data analysis center}
+ \newacronym{rest}{REST}{Representational State Transfer} 
+ \newacronym{api}{API}{application programmable interface}
+\newacronym{grch38}{GRCh38}{Genome Reference Consortium Homo sapiens genome assembly 38}
+\newacronym{fpkm}{FPKM}{Fragments per kilobase per million reads mapped}
+\newacronym{rsem}{RSEM}{RNA-Seq by Expectation-Maximization}
+\newacronym{slca}{SLC35E2A}{solute carrier family 35 member E2A}
+\newacronym{slcb}{SLC35E2B}{solute carrier family 35 member E2B}
+\newacronym{cde}{CDE}{Common Data Element}
+\newacronym{id}{ID}{identification}
+\newacronym{ajcc}{AJCC}{the American Joint Committee on Cancer}
+\newacronym{uicc}{UICC}{he Union for International Cancer Control}
+\newacronym{tnm}{TNM}{the tumor size (T), cervical lymph node metastases (N), and distal metastasis status (M)}
+\newacronym{ci95}{95\% CI}{95\% confidence interval}
+\newacronym{os}{OS}{overall survival}
+\newacronym{hr}{HR}{hazard ratio}
+\newacronym{hpv}{HPV}{human papillomavirus}
+\newacronym{ene}{ENE}{extra-nodal extension}
+\newacronym{lvsi}{LVSI}{lymph-vascular space invasion}
+\newacronym{pni}{PNI}{perineural invasion}
+\newacronym{doi}{DOI}{depth of invasion}
+\newacronym{lnd}{LND}{lymph node density}
+\newacronym{wpoi5}{WPOI-5}{worst pattern of invasion score 5}
+\newacronym{glut4}{GLUT4}{glucose transporter 4}
+\newacronym{slc2a4}{SLC2A4}{solute carrier family 2 member A4}
+\newacronym{trim24}{TRIM24}{tripartite motif-containing 24}
+\newacronym{til}{TIL}{tumor-infiltrating lymphocytes}
+\newacronym{tmb}{TMB}{tumor mutational burden}
+
+
+
+%%
 \usepackage[utf8]{inputenc}
 % Make latex understand and use the typographic
 % rules of the language used in the document.
@@ -199,146 +323,24 @@
 %the Eye Catcher (the logo on the left)
 {
   %this can be commented out or replaced by a company/department logo
-  \includegraphics[height=0.35\headerheight]{TMU_logo.png} %{https://www.tmu.edu.tw/images/title.png}
+  \includegraphics[height=0.55\headerheight]{TMU_TMWH_logo.pdf} %{https://www.tmu.edu.tw/images/title.png}
 }
 %the poster title
 {\color{white}\bf
-  \Large A Transcriptomic Analysis of Head and Neck Squamous Cell Carcinomas for Prognostic Indication
+  \Large A Transcriptomic Analysis of Head and Neck Squamous Cell Carcinomas for Prognostic Indications
 }
 %the author(s)
 {\color{white}\small
-  \vspace{1em} Li-Hsing (Tex) Chi \\[0.5em] % Jesper Kjær Nielsen
+  \vspace{1em} Li-Hsing (Tex) Chi, D.D.S, Ph.D. Candidate \\[0.5em] % Jesper Kjær Nielsen
   Oral and Maxillofacial Surgery \\
   Dept.\ of Dentistry, Wan Fang Hospital, Taipei Medical University, Taipei, Taiwan\\
   110050@w.tmu.edu.tw
 }
 %the logo (the logo on the right)
 {
-  %this can be commented out or replaced by a company/department logo
-  \includegraphics[height=0.25\headerheight]{TMWH_logo.png}
+  Video Abstract:
+  \includegraphics[height=0.45\headerheight]{QRcode_VideoAbstract_JPM-1309345.pdf}
 }
-
-%%%%
-%%% for abbreviations, or acronyms
-\usepackage[acronym, nopostdot]{glossaries}  % automake
-\usepackage{glossary-inline}
-%\setacronymstyle{long-short}
-%\renewcommand*{\glossarysection}[2][]{} 
-%\renewcommand*{\glossarysection}[2][]{\textbf{#1}: }
-% for abbreviations environment
-%\newcommand{\abbrlabel}[1]{\makebox[3cm][l]{\textbf{#1}\ \dotfill}}
-\newenvironment{abbreviation}
-
-
-%\section{abbreviation}
-%%%%%%%%%%%%% Define abbreviation
-%\makeglossaries %https://tex.stackexchange.com/questions/110095/list-of-acronyms-is-not-displayed
-
-
-
-\newacronym{ncbi}{NCBI}{National Center for Biotechnology Information}
-\newacronym{degs}{DEGs}{differentially expressed genes}
-
-\newacronym{ihc}{IHC}{immunohistochemistry}
-\newacronym{fdr}{FDR}{false discovery rate}
-
-\newacronym{hpa}{HPA}{the Human Protein Atlas}
-\newacronym{hnscc}{HNSCC}{head and neck squamous cell carcinoma}
-\newacronym{tcga}{TCGA}{the Cancer Genome Atlas}
-\newacronym{tcpa}{TCPA}{the Cancer Proteome Atlas}
-\newacronym{rna}{RNA}{ribonucleic acid}
-\newacronym{rnaseq}{RNA-Seq}{RNA sequencing}
-\newacronym{lncrna}{lncRNA}{long non-coding RNA}
-%\newacronym{km}{KM}{Kaplan--Meier}
-\newacronym{rppa}{RPPAs}{reverse-phase protein arrays}
-\newacronym{rpma}{RPMA}{reverse-phase protein lysate microarray}
-
-\newacronym{mmp}{MMP}{matrix metalloproteinase}
- %DKK1, CAMK2N1, STC2, PGK1, SURF4, USP10, NDFIP1, FOXA2, STIP1, and DKC1
- %ZNF557, ZNF266, IL19, MYO1H, FCGBP, LOC148709, EVPLL, PNMA5, KIAA1683, and NPB
-
-\newacronym{DKK1}{DKK1}{dickkopf WNT signaling pathway inhibitor 1} 
-\newacronym{CAMK2N1}{CAMK2N1}{calcium/calmodulin dependent protein kinase II inhibitor 1} 
-\newacronym{CALML5}{CALML5}{calmodulin like 5}
-
-\newacronym{STC2}{STC2}{stanniocalcin 2} 
-\newacronym{PGK1}{PGK1}{phosphoglycerate kinase 1} 
-\newacronym{SURF4}{SURF4}{surfeit 4} 
-\newacronym{USP10}{USP10}{ubiquitin specific peptidase 10} 
-\newacronym{NEDD4}{NEDD4}{neural precursor cell expressed, developmentally down-regulated 4}
-\newacronym{NDFIP1}{NDFIP1}{NEDD4 family interacting protein 1} 
-\newacronym{FOXA2}{FOXA2}{forkhead box A2} 
-\newacronym{STIP1}{STIP1}{stress-induced-phosphoprotein 1} 
-\newacronym{DKC1}{DKC1}{dyskeratosis congenita 1, dyskerin} 
-
-\newacronym{ZNF557}{ZNF557}{zinc finger protein 557} 
-\newacronym{ZNF266}{ZNF266}{zinc finger protein 266} 
-\newacronym{IL19}{IL19}{interleukin 19} 
-\newacronym{MYO1H}{MYO1H}{myosin 1H} 
-\newacronym{FCGBP}{FCGBP}{Fc fragment of IgG binding protein} 
-\newacronym{LOC148709}{LOC148709}{LncRNA LOC148709} 
-\newacronym{EVPLL}{EVPLL}{envoplakin-like protein} 
-\newacronym{PNMA5}{PNMA5}{paraneoplastic antigen like 5} 
-%\newacronym{KIAA1683}{KIAA1683}{IQCN, IQ Motif Containing N} 
-\newacronym{IQCN}{IQCN}{IQ motif containing N} % previous name KIAA1683
-% "IQ'' refers to the first two amino acids of the motif: isoleucine (commonly) and glutamine (invariably)
-\newacronym{NPB}{NPB}{neuropeptide B} 
-
- \newacronym{rt}{RT}{radiation therapy}
- \newacronym{nccn}{NCCN}{National Comprehensive Cancer Network}
- \newacronym{hif}{HIF}{hypoxia-inducible factor}
- \newacronym{egfr}{EGFR}{epidermal growth factor receptor}
- \newacronym{ras}{RAS}{rat sarcoma}
- \newacronym{hras}{HRAS}{Harvey rat sarcoma viral oncoprotein}
- \newacronym{erk}{ERK}{extracellular signal-regulated kinases}
- \newacronym{us}{US}{United States}
- \newacronym{fda}{FDA}{Food and Drug Administration}
- \newacronym{tpf}{Tax-PF}{docetaxel, cisplatin, and 5-fluorouracil}
- \newacronym{tki}{TKI}{tyrosine kinase inhibitor}
- \newacronym{her}{HER}{human epidermal growth factor receptor}
- \newacronym{ici}{ICI}{immune-checkpoint inhibitor}
- \newacronym{ctla4}{CTLA-4}{cytotoxic T lymphocyte antigen 4}
- \newacronym{pd1}{PD-1}{programmed death 1}
- \newacronym{pdl1}{PD-L1}{programmed death ligand 1}
- \newacronym{tim3}{TIM-3}{T-cell immunoglobulin mucin protein 3}
- \newacronym{lag3}{LAG-3}{lymphocyte activation gene 3}
- \newacronym{ifng}{IFN-$\gamma$}{interferon gamma}
- \newacronym{tigit}{TIGIT}{T cell immunoglobin and immunoreceptor tyrosine-based inhibitory motif}
- \newacronym{gitr}{GITR}{glucocorticoid-induced tumor necrosis factor receptor}
- \newacronym{vista}{VISTA}{V-domain Ig suppressor of T-cell activation}
- \newacronym{tmsb4x}{TMSB4X}{thymosin beta-4 X-linked}
- \newacronym{emt}{EMT}{epithelial-mesenchymal-transition}
- \newacronym{gdc}{GDC}{Genomic Data Commons}
- \newacronym{nci}{NCI}{the National Cancer Institute}
- \newacronym{gdac}{GDAC}{genome data analysis center}
- \newacronym{rest}{REST}{Representational State Transfer} 
- \newacronym{api}{API}{application programmable interface}
-\newacronym{grch38}{GRCh38}{Genome Reference Consortium Homo sapiens genome assembly 38}
-\newacronym{fpkm}{FPKM}{Fragments per kilobase per million reads mapped}
-\newacronym{rsem}{RSEM}{RNA-Seq by Expectation-Maximization}
-\newacronym{slca}{SLC35E2A}{solute carrier family 35 member E2A}
-\newacronym{slcb}{SLC35E2B}{solute carrier family 35 member E2B}
-\newacronym{cde}{CDE}{Common Data Element}
-\newacronym{id}{ID}{identification}
-\newacronym{ajcc}{AJCC}{the American Joint Committee on Cancer}
-\newacronym{uicc}{UICC}{he Union for International Cancer Control}
-\newacronym{tnm}{TNM}{the tumor size (T), cervical lymph node metastases (N), and distal metastasis status (M)}
-\newacronym{ci95}{95\% CI}{95\% confidence interval}
-\newacronym{os}{OS}{overall survival}
-\newacronym{hr}{HR}{hazard ratio}
-\newacronym{hpv}{HPV}{human papillomavirus}
-\newacronym{ene}{ENE}{extra-nodal extension}
-\newacronym{lvsi}{LVSI}{lymph-vascular space invasion}
-\newacronym{pni}{PNI}{perineural invasion}
-\newacronym{doi}{DOI}{depth of invasion}
-\newacronym{lnd}{LND}{lymph node density}
-\newacronym{wpoi5}{WPOI-5}{worst pattern of invasion score 5}
-\newacronym{glut4}{GLUT4}{glucose transporter 4}
-\newacronym{slc2a4}{SLC2A4}{solute carrier family 2 member A4}
-\newacronym{trim24}{TRIM24}{tripartite motif-containing 24}
-\newacronym{til}{TIL}{tumor-infiltrating lymphocytes}
-\newacronym{tmb}{TMB}{tumor mutational burden}
-
 
 
 
@@ -429,6 +431,7 @@ The way to find our biomarkers: CAMK2N1, CALML5, and FCGBP.
 
 \begin{center}
   \includegraphics[width=0.8\textwidth]{Figure_4_CAMK2N1_CALML5_FCGBP.pdf}
+  \label{fig:3KM}
   \captionof{figure}{
 During \hl{cutoff finding} (within 30\%--70\% quantile), hundreds of Kaplan--Meier (KM) plots were generated for each gene.\\
 - The cutoffs (gene expression) were shown in the cumulative FDR-adjusted \hl{\textit{p}~value plots} of  CAMK2N1, CALML5, and FCGBP.\\
@@ -536,21 +539,13 @@ The top 3 genes with prognostic impacts on HNSCC. Selection criteria (fit all):\
     }
 \end{center}
 
-
-%%
 \begin{center}
-  \begin{tabular}{c c c}
-    \toprule
-    header 1 & header 2 & header 3\\
-    \midrule
-    data (1,1) & data (1,2) & data (1,3)\\
-    data (2,1) & data (2,2) & data (2,3)\\
-    data (3,1) & data (3,2) & data (3,3)\\
-    \bottomrule
-  \end{tabular}
-  \captionof{table}{A very simple table with booktabs}
-  \label{tab:tablabel}
+% QR code
+\footnotesize \hl{Full Article Text is published\cite{Chi2021}} at \url{https://www.mdpi.com/2075-4426/11/8/782/htm}
+\includegraphics[width=0.2\textwidth]{QRcode_JPM-1309345.png}
 \end{center}
+
+
 \end{posterbox}
 
 
@@ -643,14 +638,14 @@ CI95\%: 95\% confidence interval;
 %\begin{minipage}[c]{0.40\linewidth}
 \begin{outline}
     \1 Despite the improvements in those interventions, the survival of \acrshort{hnscc} has improved only marginally over the past decade worldwide~\cite{hpa2019}.
-    \1 The five-year survival rate is under \hl{60\%}.
+    \1 The five-year survival rate is under \hl{60\%} (Fig. \ref{fig:3KM}).
     \1 To find more \hl{unknown pieces of a puzzle}, which impact survival.
 \end{outline}
 %\end{minipage}%\hspace{2mm}
 %\begin{wrapfigure}{r}{0.3\textwidth}
 %\begin{minipage}[c]{0.55\linewidth}
 %    \raggedright
-    \includegraphics[width=0.95\textwidth]{KMplot_CAMK2N1.pdf}
+%    \includegraphics[width=0.95\textwidth]{KMplot_CAMK2N1.pdf}
 %\end{minipage}
 
 \end{posterbox}
@@ -660,20 +655,15 @@ CI95\%: 95\% confidence interval;
 %%%%%%%
 \section{Holistic Cancer Care}
 \begin{posterbox}[name=feedback,column=2,below=problems]{Holistic Cancer Care}
-Holistic (whole) care: to care \hl{spirit}, \hl{emotion}, \hl{the body} of a person, and his \hl{social} relation.
+Holistic (whole) cancer care~\cite{Mehta2019,Iftikhar2021}: to care \hl{spirit}, \hl{emotion}, \hl{the body} of a person, and his \hl{social} relation.
 
 %%
-\begin{picture}(20, 10)(0,0) %(1,0.55038404)%
-%\centering
-  \put(0,0){\includegraphics[width=9.0cm]{Figure_5_holisticCare.pdf}}%
-  \put(0.4, 9.3){\fontfamily{qcr}\selectfont
-  \textbf{[Physician]}}%
-  \put(6.0, 7.8){\fontfamily{qcr}\selectfont
-  HNSCC}
-\end{picture}
+\begin{center}
+  \includegraphics[width=0.9\textwidth]{Figure_5_holisticCare.pdf}
+\end{center}
 %\includegraphics[width=10cm]{Figure_5_holisticCare.pdf}
 
-Holistic cancer care~\cite{Mehta2019,Iftikhar2021}:  
+ 
 \begin{outline}
 \1 to give the physical care: systemic therapy (drug) or surgery
 %\1 to support cancer patients' spiritual, emotional, physical, and socioeconomic needs
@@ -686,10 +676,15 @@ Holistic cancer care~\cite{Mehta2019,Iftikhar2021}:
 
 \end{posterbox}
 
+
+
+%%%% Reference
 \begin{posterbox}[name=refs,column=2,below=feedback,above=bottom]{References}
 % In the last box, you will usually have a list of references
 % The bibliography automatically adds the title "References", but
 % this have been removed in the preamble
+
+
 
 % use either ......
 \bibliographystyle{plain}
