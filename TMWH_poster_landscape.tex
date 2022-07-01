@@ -34,6 +34,8 @@
 % encoding of your files by selecting "save as"
 % an select the desired input encoding. 
 
+\newcommand{\comm}[1]{} % for comment it out; https://tex.stackexchange.com/questions/17816/commenting-out-large-sections% for \comment  \comm{}
+
 \usepackage{outlines}
 \usepackage{soul} % for \underline{}
 \usepackage{tabularx} % for resizebox?
@@ -391,7 +393,7 @@
 \begin{outline}
 
 \begin{center}
-    \includegraphics[width=0.5\textwidth]{Figure_1_manuscript_workflow_modify.pdf}
+    \includegraphics[width=0.55\textwidth]{Figure_1_manuscript_workflow_modify.pdf}
     \captionof{figure}{An in-house workflow---pvalueTex}
     \label{fig:workflow}
 \end{center}   
@@ -438,6 +440,8 @@ The way to find our biomarkers: CAMK2N1, CALML5, and FCGBP.
 %%
 \begin{posterbox}[name=figures,column=1,below=install,above=bottom]{Figures and Tables}
 
+\comm{
+%Figure 2
 \begin{center}
   \includegraphics[width=0.9\textwidth]{Figure_4_CAMK2N1_CALML5_FCGBP.pdf}
   \label{fig:3KM}
@@ -456,6 +460,8 @@ During \underline{cutoff finding} (within 30\%--70\% quantile), hundreds of Kapl
 }
 %  \label{fig:figlabel}
 \end{center}
+} % end of \comm
+
 
 %
 \begin{center}
@@ -525,8 +531,9 @@ The top 3 genes with prognostic impacts on HNSCC. Selection criteria (fit all):\
 (1) Kaplan--Meier Bonferroni-adjusted~\underline{\textit{p} \textless~0.05} in TCGA; \\
 (2) Cox's univariate and multivariate \underline{HR \textgreater{}= 1.8 or \textless{}= 0.6} in both HNSCC (TCGA) and HNSCC (GSE65858) cohorts.\\
 %(3) Cox's univariate and multivariate HR \textgreater{}= 1.8 or \textless{}= 0.6 in GSE65858 cohort.\\
-*~Cox's model: \underline{\textit{p} \textless 0.001}
+{\footnotesize *~Cox's model: \underline{\textit{p} \textless 0.001}
 (HR: hazard ratio; CI95\%: 95\% confidence interval)
+}
 }
 
 %\end{table}
@@ -539,13 +546,13 @@ The top 3 genes with prognostic impacts on HNSCC. Selection criteria (fit all):\
 
 %%%%%%%%%%
 \begin{center}
-    \includegraphics[width=0.95\textwidth]{Rplot_TCGA_HNSCC_CoxHR_CAMK2N1_top3FDRKM.pdf}
+    \includegraphics[width=0.75\textwidth]{Rplot_TCGA_HNSCC_CoxHR_CAMK2N1_top3FDRKM.pdf}
 %{\captionsetup{labelformat=empty}    
 \captionof{figure}{A volcano plot of candidate genes in \underline{HNSCC (TCGA)}.\\
     \textcolor{red}{Red spots}: HR > 1.0;
     \textcolor{green}{Green spots}: HR < 1.0;
     \textcolor{red}{Red dash line}: FDR \textit{p} = 0.05.\\
-    \textcolor{red}{CAMK2N1}, \textcolor{red}{CALML5}, \textcolor{red}{FCGBP}, and  other 17 genes had \underline{hazard ratios (HRs)} >$1.8$ or <$0.6$ and \underline{Bonferroni-adjusted} KM \textit{p} values $< 0.05$.
+    %\textcolor{red}{CAMK2N1}, \textcolor{red}{CALML5}, \textcolor{red}{FCGBP}, and other 17 genes had \underline{hazard ratios (HRs)} >$1.8$ or <$0.6$ and \underline{Bonferroni-adjusted} KM \textit{p} values $< 0.05$.
     }
 \end{center}
 
@@ -640,14 +647,14 @@ CI95\%: 95\% confidence interval;
  
  
  %Discussion \hfill 
- Poor survival rate of HNSCC patients: %\hfill}
+% Poor survival rate of HNSCC patients: %\hfill}
 
 %\begin{minipage}[c]{0.40\linewidth}
-\begin{outline}
-    \1 Despite the improvements in those interventions, the survival of \acrshort{hnscc} has improved only marginally over the past decade worldwide.%~\cite{hpa2019}.
-    \1 The five-year survival rate is under \underline{60\%} (Fig. 2). %\ref{fig:3KM}).
-    \1 Holistic care is one of \underline{unknown pieces of a puzzle}.
-\end{outline}
+%\begin{outline}
+%    \1 Despite the improvements in those interventions, the survival of \acrshort{hnscc} has improved only marginally over the past decade worldwide.%~\cite{hpa2019}.
+%    \1 The five-year survival rate is under \underline{60\%} (Fig. 2). %\ref{fig:3KM}).
+% \1 Holistic care is one of \underline{unknown pieces of a puzzle}.
+%\end{outline}
 %\end{minipage}%\hspace{2mm}
 %\begin{wrapfigure}{r}{0.3\textwidth}
 %\begin{minipage}[c]{0.55\linewidth}
@@ -655,36 +662,38 @@ CI95\%: 95\% confidence interval;
 %    \includegraphics[width=0.95\textwidth]{KMplot_CAMK2N1.pdf}
 %\end{minipage}
 
-\end{posterbox}
+%\end{posterbox}
 
 
 
 %%%%%%% , aibove=bottom
-\section{Holistic Cancer Care}
-\begin{posterbox}[name=feedback,column=2,below=problems]{Holistic Cancer Care}
-Holistic (whole) cancer care~[Mehta, 2019]~[Iftikhar, 2021]: to care \underline{spirit}, \underline{emotion}, \underline{the body} of a person, and his \underline{social} relation.
+%\section{Holistic Cancer Care}
+%\begin{posterbox}[name=feedback,column=2,below=problems]{Holistic Cancer Care}
 
 %%
 \begin{center}
-  \includegraphics[width=0.9\textwidth]{Figure_5_holisticCare.pdf}
+  \includegraphics[width=0.47\textwidth]{Figure_5_holisticCare.pdf}
 \end{center}
 %\includegraphics[width=10cm]{Figure_5_holisticCare.pdf}
 
  
 \begin{outline}
-\1 to give the physical care: systemic therapy (drug) or surgery
+\0 Holistic (whole) cancer care~[Mehta, 2019]~[Iftikhar, 2021]: to care \underline{spirit}, \underline{emotion}, \underline{the body} of a person, and his \underline{social} relation.
+\1 Holistic cancer care is a comprehensive personalized medicine.
+
+%\1 to give the physical care: systemic therapy (drug) or surgery
 %\1 to support cancer patients' spiritual, emotional, physical, and socioeconomic needs
 
-\1 \underline{therapeutic relationship}~[Rogers, 1979], the physicians' spiritual properties \underline{(empathy, sympathy, and compassion)} will engage cancer patients
-\1 to induce their \underline{self-compassion} to gain \underline{resilience against} the disease through their mind--brain--body axis~[Hsiao, 2012]
-\1 to reduce pain, to promote survival from cancer
+%\1 \underline{therapeutic relationship}~[Rogers, 1979], the physicians' spiritual properties \underline{(empathy, sympathy, and compassion)} will engage cancer patients
+%\1 to induce their \underline{self-compassion} to gain \underline{resilience against} the disease through their mind--brain--body axis~[Hsiao, 2012]
+%\1 to reduce pain, to promote survival from cancer
 
 \end{outline}
 
 \end{posterbox}
 
 
-
+\comm{
 %%%% Reference no more reference
 \begin{posterbox}[name=refs,column=2,below=feedback,above=bottom]{Conclusion}
 % In the last box, you will usually have a list of references
@@ -703,6 +712,8 @@ Holistic cancer care is a comprehensive personalized medicine.
 %  \bibliographystyle{IEEEbib}
 %  \bibliography{IEEEabrv,mybib,mybib2} 
 \end{posterbox}
+} % end of \comm
+
 
 \end{poster}
 \end{document}
